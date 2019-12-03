@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amtrak Train Schedule</title>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+        <script src="https://use.fontawesome.com/a2b235e2d3.js"></script>
+
+    </head>
+    <body>
+
+    <div class="container">
+
+    <!-- AMTRAK logo -->
+    <div class="row">
+         <img class="logo center-block" src="assets/images/logo.jpg">        
+    </div> 
+
+    <!-- Table begins here -->
+	<div class="row">
+        <div class="col-md-12" id="displayTrains">
+            <div class="panel panel-info">
+                <div class="panel-heading"><h3 class="panel-title"><strong>Train Schedule</strong> &nbsp; | &nbsp;<span id="greeting"></span>
+                    &nbsp; |&nbsp;<iframe class="digitalClock" src="https://free.timeanddate.com/clock/i5xbxxwo/n207/fn12/fs15/fc004f6d/tcd9edf8/pcd9edf8/pd2/th1"></iframe>
+                </h3> 
+                </div>
+                <div class="panel-body" >
+                    <table class="table table-hover" id='train-table'>
+	                	<thead>
+		                  	<tr>
+		                        <th>Train Name <i class="fa fa-subway" aria-hidden="true"></i></th>            
+		                        <th>Destination <i class="fa fa-arrow-right" aria-hidden="true"></i></th>            
+                                <th>Frequency <i class="fa fa-history" aria-hidden="true"></i></i></th>   
+                                <th>Next Service <i class="fa fa-clock-o" aria-hidden="true"></i></th>          
+		                        <th>Arriving in <i class="fa fa-bell" aria-hidden="true"></i></th>            
+		                    </tr>
+                           </thead>
+                           
+						<!-- Dynamically generated content will be displayed here -->
+	                    <tbody></tbody>
+
+                    </table>    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- User will add content here -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Add a Service</strong></h3>
+                </div>
+                
+                <div class="panel-body">
+                <form>
+                    <div class="form-group">
+	                    <label for="name">Train Name</label> 
+	                    <input type="text" class="form-control" id="name-input" aria-describedby="Train-name">
+                    </div>
+
+                    <div class="form-group">
+                    	<label for="destination">Destination</label>
+						<input type="text" class="form-control" id="destination-input" aria-describedby="Destination">
+                    </div>
+
+                    <div class="form-group">
+                    	<label for="frequency">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency-input" aria-describedby="Frequency">
+                    </div>
+
+                    <div class="form-group">
+                            <label for="startTime">First Service (24 hour time)</label>
+                            <input type="text" class="form-control" id="firstService-input" aria-describedby="First-service" placeholder="HH:mm">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" id="add">Add <i class="fa fa-plus" aria-hidden="true"></i></button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Fancy footer, because... why not? -->
+    <div class="footer">Handcrafted with <span class="doc-heart"><i class="fa fa-heart">
+        </i></span> and a lot of <i class="fa fa-coffee"></i></div>
+
+</body>
+</html>
+

@@ -1,1 +1,4 @@
-# Amtrak-Train-Schedule
+# Amtrak Train Timetable
+with Firebase Database & Google Auth
+
+### To see the app online please visit: https://www.julianhasse.com/amtrak

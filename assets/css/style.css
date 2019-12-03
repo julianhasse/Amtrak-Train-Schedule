@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	background-color:#004F6D;
+}
+
+#loginTitle {
+    align-content: center;
+    color:white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.digitalClock{
+	border:0px;
+	width:90px;
+	height:14px;
+	padding:0;
+	margin:0;
+}
+
+
+.footer {
+	color:white;
+	font-family: 'Roboto', sans-serif; 
+
+}
+
+.jumbotron {
+	background-image: url('assets/images/logo.jpg')
+}
+
+.logo {
+	margin: 0 auto 15px;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+h2, h3 {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color:white;
+}
+
+/* ---- FA ICONS ----- */
+/* ------------------- */
+.fa-heart {
+	color:red;
+}
+
+.fa-coffee {
+	color: #E6E6C7;
+}
+
+.fa-bell {
+	color:#68AED1;
+}
+
+.fa-clock-o {
+	color:#68AED1;
+}
+
+.fa-subway {
+	color:#68AED1;
+}
+
+.fa-arrow-right {
+	color:#68AED1;
+}
+
+.fa-history {
+	color:#68AED1;
+}
+

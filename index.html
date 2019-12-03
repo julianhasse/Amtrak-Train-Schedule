@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Amtrak</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/login.css">
+    </head>
+      
+    <!-- Below is the initialization snippet for my Firebase Auth Project - Train Scheduler -->
+    <!-- ============================================================================= -->
+    
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB9yhHke_yTlAloUcELTGgi8CftoZV_QDg",
+        authDomain: "train-login.firebaseapp.com",
+        databaseURL: "https://train-login.firebaseio.com",
+        projectId: "train-login",
+        storageBucket: "train-login.appspot.com",
+        messagingSenderId: "281054068410"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
+<!-- The code below is the initialization of firebaseui, using email/google to login -->
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'logged.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: 'www.google.com'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+  
+     
+
+<body>
+<h1 align="center" id="loginTitle">Please sign in</h1> 
+<div id="firebaseui-auth-container"></div>
+
+
+</body>
+</html>
